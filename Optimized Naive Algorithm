@@ -1,0 +1,21 @@
+void naive(string pattern, string text)  
+{  
+    int patlen = strlen(pattern);  
+    int txtlen =  strlen(text);  
+    int i = 0;  
+    while (i <= txtlen - patlen)  
+    {   int k;  
+        for (k = 0; k < patlen; k++)  
+            if (text[i + k] != pattern[k])  
+                break;  
+  
+        if (k == patlen) 
+        {  
+            cout << "Pattern found at index " << i << endl;  
+            i = i + patlen;  
+        }  
+        else if (k == 0)  
+            i = i + 1;  
+        else
+            i = i + k;    }  
+} 
