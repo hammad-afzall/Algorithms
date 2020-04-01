@@ -1,0 +1,21 @@
+int main()
+{  int p=26,q=11;
+    int m = p%q;
+    int hits=0;
+    cout<<"The mod between p and q is "<<m;
+    int text[16]= {3,1,4,1,5,9,2,6,5,3,5,8,9,7,9,3};
+    cout<<"The Text is : ";
+    for(int i=0;i<16;i++)
+     {   cout<<text[i];}
+    for(int i=0;i<15;i++)
+     {
+        int j=i+1;
+        int x=text[i];
+        int y=text[j];
+        x=x*10+y;
+        int mod = (x)%11;
+        if (mod==m)
+         { hits++;
+         }  }
+     cout<<endl<<"The no of surprious hits are: "<<hits<<endl;
+    return 0;}
