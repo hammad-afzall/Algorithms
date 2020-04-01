@@ -1,0 +1,28 @@
+#include <bits/stdc++.h> 
+#include<iostream>
+using namespace std;
+void MArray(char* pat, int patlen, int* array)
+{ 	int len = 0, i = 1;
+	array[0] = 0;
+	while (i < patlen) {
+		if (pat[i] == pat[len]) {
+			len++;
+			array[i] = len;
+			i++;}
+		else 
+		{ if (len != 0) {
+				len = array[len - 1];}
+			else 
+			{
+				array[i] = 0;
+				i++;}
+}}}
+int main()
+	{	char pat[] = "AABAABCAB";
+		int patlen = strlen(pat);
+		int array[patlen];
+		MArray(pat, patlen, array);
+        for(int i=0;i<patlen;i++)
+        {   cout<<array[i];}
+         return 0;
+}
